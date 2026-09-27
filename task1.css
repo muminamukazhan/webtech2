@@ -1,0 +1,44 @@
+.cards-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+  padding:20px 60px 90px;
+}
+.dress-card {
+  background:#fff;
+  flex:1 1 300px;
+  max-width:340px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  transition:transform var(--transition), box-shadow var(--transition);
+}
+.dress-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.12); }
+.dress-card .img-wrap { position:relative; overflow:hidden; }
+.dress-card img { width:100%; height:420px; object-fit:cover; filter:grayscale(100%); transition:filter var(--transition); }
+.dress-card:hover img { filter:grayscale(0%); }
+.corner-label {
+  position:absolute; top:14px; left:14px;
+  background:var(--black); color:#fff;
+  font-size:10px; letter-spacing:2px; text-transform:uppercase;
+  padding:5px 10px;
+}
+.card-body { padding:24px; display:flex; flex-direction:column; flex-grow:1; }
+.card-body .credit { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.card-body h3 { font-size:22px; margin-bottom:10px; }
+.card-body p { font-size:14px; color:var(--muted); flex-grow:1; }
+.card-link {
+  margin-top:18px;
+  display:inline-block;
+  padding:10px 20px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:600;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  text-align:center;
+  transition:background var(--transition), color var(--transition);
+}
+.card-link:hover { background:var(--accent); color:#fff; }

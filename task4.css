@@ -1,0 +1,36 @@
+.main-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:40px;
+  padding:20px 60px 90px;
+}
+.ranking-item {
+  display:flex; gap:24px; align-items:center;
+  padding:24px 0; border-bottom:1px solid var(--line);
+}
+.ranking-item .rank { font-family:'Playfair Display', serif; font-size:44px; color:var(--accent); width:60px; }
+.ranking-item img { width:130px; height:160px; object-fit:cover; filter:grayscale(100%); }
+.ranking-content { display:flex; flex-direction:column; flex-grow:1; }
+.ranking-content .credit { font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:6px; }
+.ranking-content h3 { font-size:20px; margin-bottom:8px; }
+.ranking-content p { font-size:14px; color:var(--muted); margin-bottom:12px; }
+.ranking-content .card-link {
+  display:inline-block;
+  padding:9px 18px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:600;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  width:fit-content;
+  transition:background var(--transition), color var(--transition);
+}
+.ranking-content .card-link:hover { background:var(--accent); color:#fff; }
+
+.sidebar-info { background:var(--charcoal); color:#eee; padding:30px; height:fit-content; }
+.sidebar-info h3 { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:18px; }
+.sidebar-info ul { list-style:none; }
+.sidebar-info li { padding:10px 0; border-bottom:1px solid #333; font-size:14px; }
+
+@media (max-width:768px) { .main-grid { grid-template-columns:1fr; } }
